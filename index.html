@@ -1,0 +1,132 @@
+<html>
+<head>
+<title>BaseInnovations</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+
+	<script src="assets/js/jquery/jquery-3.2.1.min.js"></script>
+
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</head>
+<body>
+	<div class="col-md-12 pagenav-cont">
+		<a href="#home">BaseInnovations</a>
+		<a href="#about">About</a>
+		<a href="#contact">Contact</a>
+	</div>
+
+	<div class="row" id="home">
+		<div class="overlay">
+			<h1 class="overlay-header">BaseInnovations</h1>
+			<h2 class="overlay-sub">Go further with innovation</h2>
+		</div>
+
+		<video poster="assets/img/poster.jpg" id="bgvid" playsinline autoplay muted loop>
+		<source src="assets/media/office.mp4" type="video/mp4">
+		</video>
+	</div>
+
+	<div class="row" id="about">
+		<div class="row">
+			<div class="col-md-6">
+				<h1 class="about-header">About BaseInnovations</h1>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="col-md-6">
+				<h1 class="about-body">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Haec para/doca illi, nos admirabilia dicamus. Quod, inquit, quamquam voluptatibus quibusdam est saepe iucundius, tamen expetitur propter voluptatem. Age nunc isti doceant, vel tu potius quis enim ista melius? Duo Reges: constructio interrete. Modo etiam paulum ad dexteram de via declinavi, ut ad Pericli sepulcrum accederem. Nemo igitur esse beatus potest. Perturbationes autem nulla naturae vi commoventur, omniaque ea sunt opiniones ac iudicia levitatis. Et ais, si una littera commota sit, fore tota ut labet disciplina. </h1><br /> 
+
+				<h1 class="about-body">
+				Dempta enim aeternitate nihilo beatior Iuppiter quam Epicurus; Age, inquies, ista parva sunt. Ea possunt paria non esse. Nihilne est in his rebus, quod dignum libero aut indignum esse ducamus? At iam decimum annum in spelunca iacet. Ego quoque, inquit, didicerim libentius si quid attuleris, quam te reprehenderim.
+				</h1>
+			</div>
+
+			<div class="col-md-6">
+				<div id="myCarousel" class="carousel slide" data-ride="carousel">
+				  <ol class="carousel-indicators">
+				    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				    <li data-target="#myCarousel" data-slide-to="1"></li>
+				    <li data-target="#myCarousel" data-slide-to="2"></li>
+				    <li data-target="#myCarousel" data-slide-to="3"></li>
+				  </ol>
+
+				  <div class="carousel-inner">
+				    <div class="item active photo">
+				      <img src="assets/img/01.jpg">
+				    </div>
+
+				    <div class="item photo">
+				      <img src="assets/img/02.jpg">
+				    </div>
+
+				    <div class="item photo">
+				      <img src="assets/img/03.jpg">
+				    </div>
+
+				    <div class="item photo">
+				      <img src="assets/img/04.jpeg">
+				    </div>
+
+				  </div>
+			</div>
+		</div>
+	</div>
+
+	<div class="row" id="contact">
+		<div class="row">
+			<div class="col-md-6">
+				<h1 class="contact-header">Contact Us</h1>
+			</div>
+		</div>
+
+		<div class="row">
+			<div class="container">
+			  <form action="/action_page.php">
+
+			    <label for="fname">First Name</label>
+			    <input type="text" id="fname" name="firstname" placeholder="Your name..">
+
+			    <label for="lname">Last Name</label>
+			    <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+			    <label for="country">Country</label>
+			    <select id="country" name="country">
+			      <option value="australia">Australia</option>
+			      <option value="canada">Canada</option>
+			      <option value="usa">USA</option>
+			    </select>
+
+			    <label for="subject">Subject</label>
+			    <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"></textarea>
+
+			    <input type="submit" value="Submit">
+
+			  </form>
+			</div>
+		</div>
+	</div>
+	
+</body>
+</html>
+<script>
+$(document).ready(function(){
+  $("a").on('click', function(event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+
+      var hash = this.hash;
+
+      $('html, body').animate({
+        scrollTop: $(hash).offset().top
+      }, 500, function(){
+   
+        window.location.hash = hash;
+      });
+    } 
+  });
+});
+</script>
